@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" /> 
+    <script src="script.js" defer></script>
+    <title>Audioplayer</title>
   </head>
   <body>
     <div class="audio-visual" id="audio-visual"></div>
     <div class="music-container" id="music-container">
-      <audio src="music\Smash Mouth - All Star.mp3" id="audio"></audio>
+      <audio src="" id="audio"></audio>
       <div class="img-container">
-        <img src="images\Smash Mouth - All Star.jpg" alt="music-cover" id="cover"/>
+        <img src="" alt="music-cover" id="cover"/>
       </div>
       <div class="music-info" id="music-info">
         <h4 id="title"></h4>
@@ -21,19 +22,19 @@
         </div>
       </div>
       <div class="navigation" id = "navigation">
-        <button id="prev" class="action-btn">
-          <i class="fas fa-backward"></i>
+        <button id="prev" onclick="prevSong()" class="action-btn">
+          <img src="icons\backward.png" alt="">
         </button>
-        <button id="play" class="action-btn action-btn-big">
-          <i class="fas fa-play"></i>
+        <button id="play" onclick="playPause()" class="action-btn action-btn-big">
+            <img id="image" src="icons\play.png" alt=""> 
         </button>
-        <button id="next" class="action-btn">
-          <i class="fas fa-forward"></i>
+        <button id="next" onclick = "nextSong()" class="action-btn">
+          <img src="icons\forward.png" alt="">
         </button>
       </div>
       <div class="visual" id="visual"></div>
       <input type="range" id="range" min="0" max="1" step=".01" value=".5" class="range"/>  
     </div>
-    <script src="script.js"></script>
+    
   </body>
 </html>
